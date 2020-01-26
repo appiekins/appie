@@ -10,11 +10,10 @@ var beginpage = '<h1> Guess a number! </h1><br> Max: <input type="number" id="ma
 
 document.getElementById("page").innerHTML = beginpage
 
-var max = document.getElementById("max").value
-var min = document.getElementById("min").value
-var maxattempts = document.getElementById("maxattempts").value.value
-
 function launchGame() {
+  var max = document.getElementById("max").value
+  var min = document.getElementById("min").value
+  var maxattempts = document.getElementById("maxattempts").value.value
   var gamepage = '<h1> Guess a number between ' + min + ' and ' + max + ' ! </h1><br><input type="number" id="guess"><br><br><button type="button" onclick="guessFunction()">Guess</button>'
   document.getElementById("page").innerHTML = gamepage
 }
