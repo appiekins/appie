@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style="background-color:red";>
 
 <p id="page"></p>
   
 <script>
+// guessing game
 var beginpage = '<h1> Guess a number! </h1><br> Max: <input type="number" name="max"><br> Min: <input type="number" name="min"><br>Maximum number of attempts allowed: <input type="text" name="maxattempts"><br><button type="button" onclick="myFunction()">OK</button>'
+var gamepage = 
 
 document.getElementById("page").innerHTML = beginpage
 
 function myFunction() {
-  document.getElementById("page").innerHTML = "Hello World";
+  document.getElementById("page").innerHTML = gamepage
 }
 </script>
+</body>
+<html>
