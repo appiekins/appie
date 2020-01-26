@@ -1,9 +1,17 @@
-<h1> Guess a number! </h1>
-<br>
-Max: <input type="text" name="max">
-<br>
-Min: <input type="text" name="min">
-<br>
-Maximum number of attempts allowed: <input type="text" name="maxattempts">
-<br>
-<button type="button">OK</button>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="page">
+    <h1> Guess a number! </h1><br>
+    Max: <input type="text" name="max"><br>
+    Min: <input type="text" name="min"><br>
+    Maximum number of attempts allowed: <input type="text" name="maxattempts"><br>
+    <button type="button">OK</button>
+</p>
+
+<script>
+function myFunction() {
+  document.getElementById("page").innerHTML = "Hello World";
+}
+</script>
