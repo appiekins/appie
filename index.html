@@ -13,7 +13,7 @@ document.getElementById("page").innerHTML = beginpage
 function launchGame() {
   var max = document.getElementById("max").value
   var min = document.getElementById("min").value
-  if (min > min) {
+  if (min > max) {
     document.getElementById("page").innerHTML = beginpage + "<br><br>Max has to be higher than min!"
   }else{
     var maxattempts = document.getElementById("maxattempts").value.value
