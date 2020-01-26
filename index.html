@@ -2,20 +2,24 @@
 <html>
 <body style="background-color:red";>
 
-<p id="page"></p>
+<p id="page" align="center"></p>
   
 <script>
 // guessing game
-var beginpage = '<h1> Guess a number! </h1><br> Max: <input type="number" id="max"><br> Min: <input type="number" id="min"><br>Maximum number of attempts allowed: <input type="number" id="maxattempts"><br><button type="button" onclick="myFunction()">OK</button>'
+var beginpage = '<h1> Guess a number! </h1><br> Max: <input type="number" id="max"><br> Min: <input type="number" id="min"><br>Maximum number of attempts allowed: <input type="number" id="maxattempts"><br><button type="button" onclick="launchGame()">OK</button>'
 var max = document.getElementById("max").value
 var min = document.getElementById("min").value
 var maxattempts = document.getElementById("maxattempts").value.value
-var gamepage = '<h1> Guess a number between ' min ' and ' max ' ! </h1><br><input type="number" id="guess">'
+var gamepage = '<h1> Guess a number between ' + min + ' and ' + max + ' ! </h1><br><input type="number" id="guess"><br><button type="button" onclick="guessFunction()">Guess</button>'
 
 document.getElementById("page").innerHTML = beginpage
 
-function myFunction() {
+function launchGame() {
   document.getElementById("page").innerHTML = gamepage
+}
+  
+function guessFunction() {
+  
 }
 </script>
 </body>
