@@ -6,15 +6,24 @@
   
 <script>
 // guessing game
-var beginpage = '<h1> Guess a number! </h1><br> Min: <input type="number" id="min"><br>Max: <input type="number" id="max"><br><br>Maximum number of attempts allowed: <input type="number" id="maxattempts"><br><br><button type="button" onclick="launchGame()">OK</button>'
+var beginpage = '<h1> Guess a number! </h1><br> Min: <input type="number" id="min"><br>Max: <input type="number" id="max"><br><br>Maximum number of attempts allowed: <input type="number" id="maxattempts"><br><br><button type="button" onclick="launchGame()">OK</button><br><br><p id="error"></p>'
 
 document.getElementById("page").innerHTML = beginpage
 
 function launchGame() {
   var max = document.getElementById("max").value
   var min = document.getElementById("min").value
-  if (min > max) {
-    document.getElementById("page").innerHTML = beginpage + "<br><br>Max has to be higher than min!"
+  var error = false
+  var errorMessage = ""
+  if(isNaN(min) || isNan(max)){
+    errorMessage = "Max and min have to be valid numbers!"
+  }else if(1 > max || 1 > min){
+    errorMessage = "Max and min have to be positive numbers!"
+  }else if (min => max) {
+    errorMessage = "Max has to be higher than min!"
+  }
+  if(error){
+    document.getElementById("error").innerHTML = errorMessage
   }else{
     var maxattempts = document.getElementById("maxattempts").value.value
     var gamepage = '<h1> Guess a number between ' + min + ' and ' + max + ' ! </h1><br><input type="number" id="guess"><br><br><button type="button" onclick="guessFunction()">Guess</button>'
