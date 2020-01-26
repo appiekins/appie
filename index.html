@@ -7,12 +7,13 @@
 <script>
 // guessing game
 var beginpage = '<h1> Guess a number! </h1><br> Max: <input type="number" id="max"><br> Min: <input type="number" id="min"><br>Maximum number of attempts allowed: <input type="number" id="maxattempts"><br><button type="button" onclick="launchGame()">OK</button>'
+
+document.getElementById("page").innerHTML = beginpage
+
 var max = document.getElementById("max").value
 var min = document.getElementById("min").value
 var maxattempts = document.getElementById("maxattempts").value.value
 var gamepage = '<h1> Guess a number between ' + min + ' and ' + max + ' ! </h1><br><input type="number" id="guess"><br><button type="button" onclick="guessFunction()">Guess</button>'
-
-document.getElementById("page").innerHTML = beginpage
 
 function launchGame() {
   document.getElementById("page").innerHTML = gamepage
