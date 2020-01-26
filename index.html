@@ -15,7 +15,7 @@ document.getElementById("page").innerHTML = beginpage
 function launchGame() {
   var max = document.getElementById("max").value
   var min = document.getElementById("min").value
-  var error = false
+  var error = true
   var errorMessage = ""
   if(isNaN(min) || isNaN(max)){
     errorMessage = "Max and min have to be valid numbers!"
@@ -23,6 +23,8 @@ function launchGame() {
     errorMessage = "Max and min have to be positive numbers!"
   }else if (min => max) {
     errorMessage = "Max has to be higher than min!"
+  }else{
+    error = false
   }
   if(error){
     document.getElementById("error").innerHTML = errorMessage
